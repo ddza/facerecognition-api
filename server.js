@@ -59,7 +59,7 @@ app.use(cors());
 // }
 
 app.get("/", (req, res)=>{
-    res.send("success")
+    res.send("success, it is working")
 })
 
 //signin
