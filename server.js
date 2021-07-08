@@ -14,10 +14,12 @@ const image = require('./controllers/image');
     client: 'pg',
     connection: {
       //host : '127.0.0.1',
-      host : 'postgresql-trapezoidal-00236',
-      user : 'postgres',
-      password : 'heimdal',
-      database : 'smart-brain'
+      // host : 'postgresql-trapezoidal-00236',
+      // user : 'postgres',
+      // password : 'heimdal',
+      // database : 'smart-brain'
+      host: process.env.DATABASE_URL,
+      SSL:true
     }
   });
 
