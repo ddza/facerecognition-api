@@ -18,7 +18,7 @@ const image = require('./controllers/image');
       // user : 'postgres',
       // password : 'heimdal',
       // database : 'smart-brain'
-      host: process.env.DATABASE_URL,
+      connectionString: process.env.DATABASE_URL,
       SSL:true
     }
   });
