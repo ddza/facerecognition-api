@@ -10,7 +10,7 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
  const db = knex({
     client: 'pg',
@@ -21,7 +21,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
       // password : 'heimdal',
       // database : 'smart-brain'
       connectionString: process.env.DATABASE_URL,
-      SSL:true
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
   });
 
